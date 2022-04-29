@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapKitDemoBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ILF-HY-fud">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cLo-2a-405">
+                                <rect key="frame" x="8" y="823" width="398" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iej-q1-ecm">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Map"/>
+                                        <connections>
+                                            <action selector="OnTapMapMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEs-Zo-AbQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9C-pF-zBa">
+                                        <rect key="frame" x="203" y="0.0" width="195" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="List"/>
+                                        <connections>
+                                            <action selector="OnTapListMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAi-O2-Wc3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cLo-2a-405" secondAttribute="bottom" constant="8" id="3ZI-OT-pze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cLo-2a-405" secondAttribute="trailing" constant="8" id="4Za-xz-Wn6"/>
+                            <constraint firstItem="cLo-2a-405" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="854-F0-dhs"/>
+                            <constraint firstItem="ILF-HY-fud" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BCl-Ts-7eu"/>
+                            <constraint firstItem="ILF-HY-fud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U5w-Vg-5JF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ILF-HY-fud" secondAttribute="trailing" id="jrb-Sn-YHK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ILF-HY-fud" secondAttribute="bottom" constant="50" id="lbe-ek-utz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapBottomContraint" destination="lbe-ek-utz" id="3wB-pH-djf"/>
+                        <outlet property="mapView" destination="ILF-HY-fud" id="Mfd-8V-DyF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
